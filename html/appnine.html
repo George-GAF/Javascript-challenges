@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/public.css" />
+    <link rel="stylesheet" href="../CSS/appnine.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="add-task">
+        <input type="text" placeholder="enter task" />
+        <span class="plus">+</span>
+      </div>
+      <div class="all-fun">
+        <span class="delete-all">Delete All</span>
+        <span class="complete-all">Complete All</span>
+      </div>
+      <div class="tasks-content">
+        <span class="no-tasks-message">No task to show</span>
+        <!--
+        <span class="task-box"
+          >Task one
+          <span class="delete">Delete</span>
+        </span>
+        -->
+      </div>
+    </div>
+    <div class="task-stats">
+      <div class="tasks-count">Tasks <span>0</span></div>
+      <div class="tasks-completed">Completed <span>0</span></div>
+    </div>
+    <button id="backbutton">Back</button>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../JS/public.js"></script>
+    <script src="../JS/appnine.js"></script>
+  </body>
+</html>

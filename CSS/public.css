@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 4px;
+  font-size: 18px;
+  color: white;
+  background-color: #202020;
+}
+
+#backbutton {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-style: none;
+  background-color: white;
+  box-shadow: 0 0 10px 1px white;
+}
+
+li {
+  padding: 15px 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #202020;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-scrollbar-track:hover {
+  background: #f1f1f1;
+}

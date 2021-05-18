@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/public.css" />
+    <link rel="stylesheet" href="../CSS/appeleven.css" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-info">
+        <div class="game-name">Hangman</div>
+        <div class="category">
+          <div class="info">
+            Word From:
+            <span></span>
+            Word Lenght: <span></span> Wrong Attemp: <span>0</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="hangman-draw">
+          <div class="the-draw">
+            <div class="the-stand"></div>
+            <div class="the-hang"></div>
+            <div class="the-rope"></div>
+            <div class="the-man">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="hands"></div>
+              <div class="legs"></div>
+            </div>
+          </div>
+        </div>
+        <div class="letters"></div>
+      </div>
+      <hr />
+      <div class="letters-guess"></div>
+    </div>
+    <div id="back">
+      <div id="message" class="hide">
+        <h3>title</h3>
+        <p>body body body body body</p>
+        <button class="message-button">Play Agin</button>
+      </div>
+    </div>
+    <audio id="succ" src="../audio/success.mp3" preload="auto"></audio>
+    <audio id="fail" src="../audio/fail.mp3" preload="auto"></audio>
+
+    <button id="backbutton">Back</button>
+    <script src="../JS/public.js"></script>
+    <script src="../JS/appeleven.js"></script>
+  </body>
+</html>

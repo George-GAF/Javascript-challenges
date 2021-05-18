@@ -1,0 +1,57 @@
+.input-container {
+  display: flex;
+}
+
+.input-container input:first-child {
+  margin-right: 5px;
+}
+
+.input-container input:last-child {
+  margin-left: 5px;
+}
+
+.parent {
+  width: 90%;
+  margin: 40px auto;
+  background-color: #eee;
+  padding: 20px;
+  color: #222;
+}
+
+.parent input {
+  border: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.parent input:focus {
+  outline: none;
+}
+.parent .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parent .buttons span {
+  background-color: #009688;
+  text-align: center;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.parent .result {
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  border: 2px dashed #eee;
+  text-align: center;
+}
+
+.parent .result span span {
+  font-weight: bold;
+  color: #009688;
+}

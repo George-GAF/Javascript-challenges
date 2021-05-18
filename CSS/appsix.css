@@ -1,0 +1,18 @@
+body {
+  height: 4000px;
+  scroll-behavior: smooth;
+}
+
+#goup {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  bottom: 10px;
+  left: 10px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}

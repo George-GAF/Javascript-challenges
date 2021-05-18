@@ -1,0 +1,40 @@
+h1,
+li {
+  margin-left: 100%;
+  opacity: 0;
+  transition: 1s;
+}
+
+ul {
+  padding: 15px;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 1.1em;
+}
+
+a:visited {
+  color: white;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  padding: 20px 20px 0;
+  transition: 0.5s;
+}
+
+::selection {
+  background-color: white;
+  color: #202020;
+}

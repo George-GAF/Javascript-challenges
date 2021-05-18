@@ -1,0 +1,326 @@
+:root {
+  --p-width: 4px;
+  --p-color: #222;
+}
+
+#back {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00000033;
+  width: 100%;
+  height: 100vh;
+}
+
+.hide {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.show {
+  width: 50%;
+  height: 40vh;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px 1px #00000055;
+}
+
+#message {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#message h3 {
+  color: var(--p-color);
+  text-align: center;
+}
+
+#message p {
+  color: var(--p-color);
+  margin: 20px 0;
+}
+
+#message button {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  margin: 0 0 40px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px #0d6efd, inset 0 0 5px 1px #093577;
+  font-weight: bold;
+}
+
+.container {
+  margin: 20px auto;
+  width: calc(100% - 40px);
+}
+
+.row {
+  display: flex;
+  background-color: #f8f8f8;
+}
+
+hr {
+  border: 1px solid #eee;
+}
+
+.game-info {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.game-info .game-name {
+  flex: 1;
+}
+
+.game-info .category {
+  flex: 2;
+}
+.game-info .category div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-info .category div span:first-child {
+  text-transform: capitalize;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.hangman-draw {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 20px;
+  height: 324px;
+}
+.hangman-draw .the-draw {
+  width: 60px;
+  height: 280px;
+  border-bottom: var(--p-width) solid var(--p-color);
+  position: relative;
+  left: -60px;
+  margin: auto;
+}
+.hangman-draw .the-stand {
+  content: "";
+  position: absolute;
+  width: var(--p-width);
+  background-color: var(--p-color);
+  height: 100%;
+  left: 50%;
+  margin-left: -2px;
+}
+.hangman-draw .the-hang:before {
+  content: "";
+  position: absolute;
+  height: var(--p-width);
+  background-color: var(--p-color);
+  width: 100px;
+  left: 30px;
+  top: 15px;
+}
+
+.hangman-draw .the-hang::after {
+  content: "";
+  position: absolute;
+  width: var(--p-width);
+  background-color: var(--p-color);
+  height: 30px;
+  left: 130px;
+  top: 15px;
+}
+
+.hangman-draw .the-rope {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  left: 95px;
+  top: 45px;
+  border: var(--p-width) dashed var(--p-color);
+}
+.hangman-draw .the-man .head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: var(--p-width) solid var(--p-color);
+  position: absolute;
+  left: 105px;
+  top: 55px;
+}
+.hangman-draw .the-man .body {
+  position: absolute;
+  background-color: var(--p-color);
+  width: var(--p-width);
+  height: 110px;
+  top: 102px;
+  left: 130px;
+}
+.hangman-draw .the-man .hands::before,
+.hangman-draw .the-man .hands::after {
+  content: "";
+  width: 50px;
+  position: absolute;
+  height: var(--p-width);
+  background-color: var(--p-color);
+  top: 130px;
+}
+
+.hangman-draw .the-man .hands::before {
+  left: 85px;
+  transform: rotate(150deg);
+}
+.hangman-draw .the-man .hands::after {
+  left: 130px;
+  transform: rotate(-150deg);
+}
+
+.hangman-draw .the-man .legs::before,
+.hangman-draw .the-man .legs::after {
+  content: "";
+  width: 50px;
+  position: absolute;
+  height: var(--p-width);
+  background-color: var(--p-color);
+  top: 220px;
+}
+
+.hangman-draw .the-man .legs::before {
+  left: 85px;
+  transform: rotate(-30deg);
+}
+.hangman-draw .the-man .legs::after {
+  left: 130px;
+  transform: rotate(30deg);
+}
+.hangman-draw .the-draw,
+.hangman-draw .the-draw .the-stand,
+.hangman-draw .the-draw .the-hang,
+.hangman-draw .the-draw .the-rope,
+.hangman-draw .the-draw .the-man .head,
+.hangman-draw .the-draw .the-man .body,
+.hangman-draw .the-draw .the-man .hands,
+.hangman-draw .the-draw .the-man .legs {
+  display: none;
+  opacity: 0;
+  transition: 1s;
+}
+.hangman-draw.wrong-1 .the-draw {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-2 .the-draw .the-stand {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-3 .the-draw .the-hang {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-4 .the-draw .the-rope {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-5 .the-draw .the-man .head {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-6 .the-draw .the-man .body {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-7 .the-draw .the-man .hands {
+  display: block;
+  opacity: 1;
+}
+.hangman-draw.wrong-8 .the-draw .the-man .legs {
+  display: block;
+  opacity: 1;
+}
+
+.letters {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.letters.finished {
+  pointer-events: none;
+}
+
+.letters .letter-box.clicked {
+  background-color: var(--p-color);
+  opacity: 0.2;
+  pointer-events: none;
+}
+.letters .letter-box {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  background-color: #009688;
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  line-height: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 1px #00000099;
+}
+
+.letters-guess {
+  margin: 10px auto;
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 104px;
+}
+
+.letters-guess .has-space {
+  background: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.letters-guess .has-space::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--p-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letters-guess span {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  margin-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--p-color);
+  background-color: #fdfdfd;
+  border-bottom: 3px solid var(--p-color);
+  transition: 3s;
+}
