@@ -1,0 +1,113 @@
+#cont {
+  width: 80%;
+  margin: 10px 15% 10px;
+  padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.8;
+
+  text-align: justify;
+}
+#circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-top: solid 5px green;
+  border-right: solid 5px transparent;
+  border-left: solid 5px transparent;
+  border-bottom: solid 5px purple;
+  transition: 2s;
+  transform: rotateZ(360deg);
+}
+::selection {
+  color: #fff;
+  background-color: #222;
+}
+
+.word-sp {
+  color: #fff;
+  background-color: #222;
+  border-radius: 3px;
+}
+.words-dou {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #333;
+}
+#ana {
+  position: fixed;
+  bottom: 50%;
+  left: 10px;
+  transform: translateY(50%);
+  font-size: 15px;
+  width: max-content;
+  background-color: #ddd;
+  text-align: center;
+  padding: 20px 20px;
+  box-shadow: 0 0 10px 1px #00000055;
+  border-radius: 5px;
+}
+#ana::before {
+  top: 0;
+  left: 0;
+  background-color: darkred;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#ana::after {
+  top: 0;
+  right: 0;
+  background-color: darkblue;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#ana::before,
+#ana::after {
+  z-index: -1;
+  content: "";
+  height: 100%;
+  width: 5%;
+  position: absolute;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+#ana span {
+  display: block;
+  margin: 10px 0;
+}
+
+@media (min-width: 671px) {
+  #cont {
+    width: 80%;
+    margin: 10px 15% 10px;
+  }
+  #ana {
+    width: 10%;
+    font-size: 1.3vw;
+  }
+}
+@media (max-width: 670px) {
+  #ana {
+    display: none;
+  }
+  #cont {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+.cont-button {
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
+}
+.change-size {
+  margin: 0 10px;
+  padding: 3px 20px;
+  font-weight: bolder;
+  font-size: 40px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 5px 1px #000000;
+}
